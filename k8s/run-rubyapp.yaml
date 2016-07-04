@@ -11,4 +11,4 @@ spec:
     spec:
       containers:
         - name: rubyapp-hello-world
-          image: gasconya/k8s_rubyapp:latest
+          image: gasconya/rubyapp
