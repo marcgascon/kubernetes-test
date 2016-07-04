@@ -5,6 +5,7 @@ RUN gem install sinatra
 RUN gem install redis
 COPY ./hello-world.rb /app/hello-world.rb
 WORKDIR /app/
+ENV REDIS_HOST=redis
 
 EXPOSE 4567
 CMD ["ruby", "./hello-world.rb"]
