@@ -1,4 +1,12 @@
 version: '2'
 services:
+  ruby_app:
+    build: .
+    ports:
+      - "4567:4567"
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
   redis:
     image: redis
