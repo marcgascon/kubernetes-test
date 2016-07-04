@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-hello-world
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        service: app-hello-world
+    spec:
+      containers:
+        - name: rubyapp-hello-world
+          image: gasconya/k8s_rubyapp
