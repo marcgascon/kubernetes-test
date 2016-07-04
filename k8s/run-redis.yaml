@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  template:
+    metadata:
+      labels:
+        service: redis-hello-world
+    spec:
+      containers:
+        - name: redis-hello-world
+          image: redis
